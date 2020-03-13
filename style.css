@@ -1,5 +1,5 @@
 body {
-  margin: 16px;
+  margin: 0px;
   padding: 0px;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
@@ -22,10 +22,10 @@ nav {
 }
 nav li {
   display: inline-block;
-  margin-top: 0;
+  margin-top: 4px;
   margin-right: 1rem;
   margin-left: 1rem;
-  margin-bottom: 0;
+  margin-bottom: 4px;
   color: #00356B;
 }
 
@@ -49,7 +49,6 @@ nav li {
 .nav__link {
   color: #00356B;
   text-decoration: none;
-  box-sizing: border-box;
   display: none;
 }
 
@@ -58,11 +57,13 @@ nav li {
   text-decoration: none;
   color: white;
   padding: 0.5em 1em;
-  border-radius: 10px;
+  border-radius: 6px;
   text-align: center;
+  font-size: 0.8rem;
 }
 .nav__button:hover {
-  background-color: #0000be;
+  transition-duration: 1s;
+  opacity: 0.75;
 }
 
 .hero-section {
@@ -82,6 +83,7 @@ nav li {
   display: flex;
   border-top: 2px solid #ececec;
   border-bottom: 2px solid #ececec;
+  margin: 50px 0px;
 }
 .panel .box1,
 .panel .box2 {
@@ -98,13 +100,14 @@ nav li {
 }
 .panel .box1 img,
 .panel .box2 img {
-  width: 6rem;
+  width: 5rem;
   padding: 5px;
 }
 
 .panel2 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
   margin: 50px 0px;
 }
 .panel2 .icon-container {
@@ -116,7 +119,12 @@ nav li {
   justify-self: center;
   align-self: start;
 }
+.panel2 .icon-container .grid-row1 .grid-row1__img {
+  width: 5rem;
+}
 .panel2 .icon-container .grid-row2 {
+  display: flex;
+  flex-direction: column;
   justify-self: center;
   align-self: end;
   padding: 10px 0px;
@@ -129,16 +137,30 @@ nav li {
   background-color: white;
   padding: 0.5em;
   border-radius: 6px;
-  margin: 10px 0px;
+  margin: 10px 2px;
+}
+.panel2 .icon-container .grid-row2 a:visited {
+  border: 1px solid #00356B;
+  text-decoration: none;
+  color: #00356B;
+  background-color: white;
+  padding: 0.5em;
+  border-radius: 6px;
+  margin: 10px 2px;
+}
+.panel2 .icon-container .grid-row2 a:hover {
+  background-color: #00356B;
+  color: white;
+  transition: 1s;
 }
 
 .panel3 {
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin: 50px 0px;
+  margin: 75px 0px;
   background-color: #ececec;
-  padding: 30px;
+  padding: 20px;
 }
 .panel3 .panel3__button {
   margin: 10px 0px;
@@ -148,13 +170,17 @@ nav li {
   text-decoration: none;
   color: white;
   padding: 0.5em 1em;
-  border-radius: 10px;
+  border-radius: 6px;
   text-align: center;
-  width: 10rem;
+  width: 8rem;
   color: white;
 }
 .panel3 .panel3__button a:visited {
   color: white;
+}
+.panel3 .panel3__button a:hover {
+  transition-duration: 1s;
+  opacity: 0.75;
 }
 
 .about-section {
@@ -172,7 +198,6 @@ nav li {
   justify-content: center;
   text-align: center;
   grid-template-columns: 50% 50%;
-  margin: 30px;
 }
 .hero-grid .item, .hero-grid .item1 {
   margin: 1em;
@@ -189,15 +214,19 @@ nav li {
   flex-direction: column;
   align-items: center;
 }
-
-.flex-container__img {
+.banner .flex-container__text h1 {
+  margin: 10px;
+}
+.banner .flex-container__text p {
+  margin: 24px;
+}
+.banner .flex-container__img {
   display: flex;
   width: 100%;
   height: 20rem;
-  align-items: center;
-  justify-content: center;
 }
-.flex-container__img img {
+.banner .flex-container__img img {
+  width: 100%;
   object-fit: contain;
 }
 
@@ -239,7 +268,7 @@ form input {
   padding: 0.5rem;
 }
 
-.form-input input[type=submit] {
+.form__button input[type=submit] {
   border: 1px solid #00356B;
   text-decoration: none;
   color: #00356B;
@@ -251,7 +280,7 @@ form input {
   margin: 10px;
 }
 
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 600px) {
   p {
     font-size: 100%;
   }
@@ -270,13 +299,16 @@ form input {
   .hero-grid {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-content: center;
+    margin: 50px 0px;
   }
   .hero-grid .item, .hero-grid .item1 {
     width: 8em;
-    padding: 1em;
   }
   .hero-grid img {
     width: 8em;
+  }
+  .hero-grid h1 {
+    font-size: 100%;
   }
 
   .hero__video {
