@@ -136,6 +136,7 @@ nav{
 }
 
 .panel2{
+    // might want to think about switching to a colomn layout on mobile view
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     width: 100%;
@@ -207,7 +208,8 @@ nav{
     }
 }
 
-.hero-grid{
+.hero-grid{  
+    // the items in this grid are not centered
     display: grid;
     grid-area: 2/2;
     justify-content: center;
